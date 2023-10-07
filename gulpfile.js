@@ -78,8 +78,8 @@ const uglify = require('gulp-uglify');
 
  // Task for compiling our CSS files using PostCSS
 function Tcss(callback) { 
-  // return src(paths.src.scss) // read .css files from ./src/ folder
-   return src("./src/*.css") // read .css files from ./src/ folder
+  return src(paths.src.scss) // read .css files from ./src/ folder
+   // return src("./src/*.css") // read .css files from ./src/ folder
         .pipe(postcss([ require('tailwindcss'),])) // compile using postcss
        // .pipe(dest("./assets/css")) // paste them in ./assets/css folder
          .pipe(dest(paths.src.css))
